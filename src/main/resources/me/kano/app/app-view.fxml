@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" styleClass="dark" stylesheets="@../../../style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.kano.app.controller.ViewController">
+    <HBox alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="600.0" style="-fx-background-color: rgb(30,33,36);">
+        <VBox.margin>
+            <Insets />
+        </VBox.margin>
+        <TextFlow prefHeight="200.0" prefWidth="500.0">
+                <Text fill="#9e9e9e" strokeType="OUTSIDE" strokeWidth="0.0" text="Todolist app">
+                    <font>
+                        <Font name="Arial Bold" size="17.0" />
+                    </font>
+                </Text>
+            <HBox.margin>
+                <Insets top="5.0" />
+            </HBox.margin>
+        </TextFlow>
+        <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="479.0" layoutY="15.0" onMouseClicked="#onMinimizeWindow" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../../../subtract.png" />
+            <HBox.margin>
+                <Insets right="10.0" />
+            </HBox.margin>
+        </ImageView>
+        <ImageView fitHeight="26.0" fitWidth="26.0" onMouseClicked="#onCloseWindow" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../../../close.png" />
+        </ImageView>
+        <opaqueInsets>
+            <Insets />
+        </opaqueInsets>
+    </HBox>
+     <TextField editable="false" focusTraversable="false" onMouseClicked="#onAddComponent" prefHeight="41.0" prefWidth="480.0" promptText="Add a task" style="-fx-background-color: rgb(54,57,62); -fx-background-radius: 30;">
+      <font>
+         <Font name="Arial" size="13.0" />
+      </font>
+      <VBox.margin>
+         <Insets left="60.0" right="60.0" top="10.0" />
+      </VBox.margin>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+     </TextField>
+    <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="400.0" prefWidth="500.0" style="-fx-background: transparent;">
+        <VBox fx:id="listBox" spacing="3" style="-fx-background-color: #36393e;">
+          <VBox.margin>
+             <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+          </VBox.margin>
+         <padding>
+            <Insets top="3.0" bottom="3.0" />
+         </padding>
+        </VBox>
+      <VBox.margin>
+         <Insets top="5.0" />
+      </VBox.margin>
+    </ScrollPane>
+</VBox>
